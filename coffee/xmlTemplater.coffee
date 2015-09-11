@@ -38,6 +38,7 @@ module.exports=class XmlTemplater #abstract class !!
 	calcIntellegentlyDashElement:()->return false #to be implemented by classes that inherit xmlTemplater, eg DocxTemplater
 	getFullText:(@tagXml=@tagXml) ->
 		matcher=new XmlMatcher(@content).parse(@tagXml)
+		#console.log(matcher.matches);
 		output= (match[2] for match in matcher.matches) #get only the text
 		DocUtils.wordToUtf8(DocUtils.convert_spaces(output.join(""))) #join it
 	handleModuleManager:(type,data)->
