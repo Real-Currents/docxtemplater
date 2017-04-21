@@ -24,11 +24,9 @@ docxgenNode/input.json
 test/spec/output.docx
 /output.docx
 tags
-/docs/build
 *.spec.js
 *.spec.map
 *.log
-/js
-/build
-/browser
-examples/index.html
+build
+browser
+examples
